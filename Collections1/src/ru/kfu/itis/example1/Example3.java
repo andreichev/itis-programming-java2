@@ -3,12 +3,14 @@ package ru.kfu.itis.example1;
 import ru.kfu.itis.example1.base.MyDictionary;
 import ru.kfu.itis.example1.base.MyList;
 import ru.kfu.itis.example1.impl.MyDictionaryImpl;
+import ru.kfu.itis.example1.impl.MyLinkedList;
 import ru.kfu.itis.example1.impl.MyListOptimized;
+
+import java.util.Iterator;
 
 public class Example3 {
     public static void main(String[] args) {
-        MyList<String> list1 = new MyListOptimized<>();
-
+        MyList<String> list1 = new MyLinkedList<>();
         list1.add("One");
         list1.add("Two");
         list1.add("Three");
@@ -27,8 +29,14 @@ public class Example3 {
 
         list1.remove(2);
 
-        for(int i = 0; i < list1.size(); i++) {
-            System.out.println("Index: " + i + ", element: " + list1.get(i));
+//        Iterator<String> iterator = list1.iterator();
+//        while (iterator.hasNext()) {
+//            String element = iterator.next();
+//            System.out.println("Element: " + element);
+//        }
+
+        for(String element: list1) {
+            System.out.println("Element: " + element);
         }
 
         MyList<Integer> list2 = new MyListOptimized<>();
