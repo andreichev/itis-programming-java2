@@ -6,8 +6,6 @@ import ru.kfu.itis.example1.impl.MyDictionaryImpl;
 import ru.kfu.itis.example1.impl.MyLinkedList;
 import ru.kfu.itis.example1.impl.MyListOptimized;
 
-import java.util.Iterator;
-
 public class Example3 {
     public static void main(String[] args) {
         MyList<String> list1 = new MyLinkedList<>();
