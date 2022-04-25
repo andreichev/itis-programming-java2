@@ -8,6 +8,7 @@ public class Example2 {
         Object object = clazz.newInstance();
 
         Method func = clazz.getDeclaredMethod("func");
+        func.setAccessible(true);
         func.invoke(object);
     }
 }
