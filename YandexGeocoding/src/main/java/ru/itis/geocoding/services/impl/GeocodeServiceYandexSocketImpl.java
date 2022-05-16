@@ -1,7 +1,6 @@
 package ru.itis.geocoding.services.impl;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import ru.itis.geocoding.exceptions.GeocodingException;
@@ -16,7 +15,7 @@ import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
-public class GeocodeServiceYandexImpl implements GeocodingService {
+public class GeocodeServiceYandexSocketImpl implements GeocodingService {
     public String geocode(Point location) throws GeocodingException {
         String host = "geocode-maps.yandex.ru";
         // 1.x?geocode=%f,%f&apikey=f929bb23-4471-42b8-a34e-13f2b18da04d&format=xml
