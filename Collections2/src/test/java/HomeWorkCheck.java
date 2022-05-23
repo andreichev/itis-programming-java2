@@ -1,4 +1,4 @@
-import itis.homework.impl.MyArrayList;
+import itis.homework.impl.MyLinkedList;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ public class HomeWorkCheck {
 
     @Test
     void check() {
-        List<String> list = new MyArrayList<String>();
+        List<String> list = new MyLinkedList<String>();
         list.add("One");
         list.add("Two");
         list.add("Three");
@@ -31,7 +31,7 @@ public class HomeWorkCheck {
         list.add("Fifteen");
 
         Assertions.assertEquals(list.get(2), "Three");
-        list.remove(2);
+        list.remove("Three");
         Assertions.assertEquals(list.get(2), "Four");
     }
 }
