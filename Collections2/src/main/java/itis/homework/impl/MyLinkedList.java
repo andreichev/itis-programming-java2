@@ -1,6 +1,15 @@
 package itis.homework.impl;
 
 import java.util.List;
+import java.util.Iterator;
+
+import java.util.Spliterator;
+
+import java.util.function.Consumer;
+
+
+
+
 
 public class MyLinkedList<T> implements List<T> {
   static class MyLinkedListIterator<T> implements Iterator<T> {
