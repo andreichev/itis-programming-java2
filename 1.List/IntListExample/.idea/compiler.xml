@@ -6,8 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyReminder" />
-        <module name="Reminder" />
+        <module name="IntListExample" />
       </profile>
     </annotationProcessing>
   </component>
