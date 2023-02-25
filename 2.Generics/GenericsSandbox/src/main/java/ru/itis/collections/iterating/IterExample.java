@@ -1,10 +1,8 @@
 package ru.itis.collections.iterating;
 
-import ru.itis.collections.sorting.CoolListSorter;
 import ru.itis.collections.sorting.Student;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
