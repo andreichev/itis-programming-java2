@@ -3,7 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.itis.dictionary.map.CoolMap;
-import ru.itis.dictionary.map.CoolMapImpl;
+import ru.itis.dictionary.map.NotCoolMapImpl;
 
 public class CoolMapTests {
     CoolMap<String, String > map;
@@ -15,7 +15,7 @@ public class CoolMapTests {
 
     @BeforeEach
     void beforeEachTest() {
-        map = new CoolMapImpl<>();
+        map = new NotCoolMapImpl<>();
     }
 
     @Test

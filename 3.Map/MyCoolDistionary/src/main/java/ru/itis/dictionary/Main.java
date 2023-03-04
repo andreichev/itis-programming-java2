@@ -5,7 +5,7 @@ import ru.itis.dictionary.map.CoolMapImpl;
 
 public class Main {
     public static void main(String[] args) {
-        CoolMap<String, String> capitals = new CoolMapImpl<String, String>();
+        CoolMap<String, String> capitals = new CoolMapImpl<>();
         capitals.put("Japan", "Tokyo");
         capitals.put("Russia", "Moscow");
         capitals.put("Great Britain", "London");
