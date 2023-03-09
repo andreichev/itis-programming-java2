@@ -3,7 +3,7 @@ package ru.itis.dictionary.map;
 import java.util.LinkedList;
 import java.util.List;
 
-public class CoolMapImpl<K, V> implements CoolMap<K, V> {
+public class CoolHashMapImpl<K, V> implements CoolMap<K, V> {
     final int COUNT = 10;
 
     static class MyEntry<K, V> {
@@ -31,7 +31,7 @@ public class CoolMapImpl<K, V> implements CoolMap<K, V> {
 
     List<MyEntry<K, V>>[] lists = new LinkedList[COUNT];
 
-    public CoolMapImpl() {
+    public CoolHashMapImpl() {
         for (int i = 0; i < lists.length; i++) {
             lists[i] = new LinkedList<>();
         }
