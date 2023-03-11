@@ -1,41 +1,36 @@
 package ru.itis.serialization_example;
 
-import ru.itis.serialization_example.model.Car;
-import ru.itis.serialization_example.model.User;
+import ru.itis.serialization_example.model.Animal;
+import ru.itis.serialization_example.model.Cat;
+import ru.itis.serialization_example.model.Dog;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sandbox {
-    private static final File file = new File("users/list.txt");
+    private static final File file = new File("users/animals.txt");
 
     public static void main(String[] args) {
-        Car car = new Car("UAZ Patriot", 2020);
-        User user = new User("Yegor", "Ussov", 18, "11-103", car);
-        saveUser(user);
-        // readUser();
-    }
+        List<Animal> animals = new ArrayList<>();
 
-    private static void saveUser(User user) {
         try {
-            ObjectOutputStream stream = new ObjectOutputStream(new FileOutputStream(file));
-            stream.writeObject(user);
-            System.out.println("User saved");
-        } catch (IOException e) {
-            System.out.println("ERROR WRITING TO FILE");
-        }
-    }
-
-    private static void readUser() {
-        try {
-            ObjectInputStream stream = new ObjectInputStream(new FileInputStream(file));
-            User user = (User) stream.readObject();
-
-            System.out.println(user.getFirstName());
-            System.out.println(user.getCar().getModel());
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            ObjectOutputStream outputStream = new ObjectOutputStream(fileOutputStream);
+            animals.add(new Cat("Boris", 2));
+            animals.add(new Cat("Alex", 3));
+            animals.add(new Dog("Avakum", 3, "Špitz"));
+            outputStream.writeObject(animals);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ERROR READING FROM FILE");
-        } catch (ClassNotFoundException e) {
+        }
+
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            animals = (List<Animal>) objectInputStream.readObject();
+            System.out.println(animals.get(0));
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
