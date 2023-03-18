@@ -1,21 +1,14 @@
-package info.istamendil.notebook;
+package ru.itis.notebook;
 
-import info.istamendil.notebook.data.Db;
-import info.istamendil.notebook.data.DbException;
-import info.istamendil.notebook.data.FileDb;
-import info.istamendil.notebook.utils.*;
+import ru.itis.notebook.data.Db;
+import ru.itis.notebook.data.DbException;
+import ru.itis.notebook.data.FileDb;
+import ru.itis.notebook.utils.*;
 
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-/**
- * Note Book. UserInteractor and DB modules.
- *
- * @author Alexander Ferenets (Istamendil) <ist.kazan@gmail.com>
- * <p>
- * Code for studying purposes. Programming course. Kazan Federal University, ITIS.
- * http://study.istamendil.info/
- */
+
 public class App extends Application {
 
     private static final String DB = "tmp/db.txt";
@@ -24,9 +17,6 @@ public class App extends Application {
     protected UserInteract terminal;
     protected Db db;
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         App app = new App(args);
     }
@@ -81,5 +71,4 @@ public class App extends Application {
             System.exit(1);
         }
     }
-
 }

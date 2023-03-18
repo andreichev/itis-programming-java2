@@ -1,4 +1,4 @@
-package info.istamendil.notebook.utils;
+package ru.itis.notebook.utils;
 
 /**
  * @author Alexander Ferenets (Istamendil) <ist.kazan@gmail.com>

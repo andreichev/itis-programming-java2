@@ -1,18 +1,10 @@
-package info.istamendil.notebook.utils;
+package ru.itis.notebook.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-/**
- * Implementation of UserInteractor with reading command from file ("punched card").
- *
- * @author Alexander Ferenets (Istamendil) <ist.kazan@gmail.com>
- * <p>
- * Code for studying purposes. Programming course. Kazan Federal
- * University, ITIS. http://study.istamendil.info/
- */
 public class PunchedCardUserInteract implements UserInteract {
 
     protected final String[] lines;
