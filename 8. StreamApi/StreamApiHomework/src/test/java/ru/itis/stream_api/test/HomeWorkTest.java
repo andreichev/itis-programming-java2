@@ -6,8 +6,20 @@ import ru.itis.stream_api.model.Student;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class HomeWorkTest {
+    static List<Student> getStudents() {
+        return Arrays.asList(
+                new Student("Ivan", "Ivanov", 50),
+                new Student("Vasya", "Sidorov", 60),
+                new Student("Anton", "Antonov", 70),
+                new Student("Andrey", "Kuznecov", 80),
+                new Student("Oleg", "Kulikov", 10),
+                new Student("Ashot", "Ahmetov", 20)
+        );
+    }
+
     @Test
     void checkTask1() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4);
@@ -44,19 +56,22 @@ public class HomeWorkTest {
 
     @Test
     void checkTask4() {
-        List<Student> list = Arrays.asList(
-                new Student("Ivan", "Ivanov", 50),
-                new Student("Vasya", "Sidorov", 60),
-                new Student("Anton", "Antonov", 70),
-                new Student("Andrey", "Kuznecov", 80),
-                new Student("Oleg", "Kulikov", 10),
-                new Student("Ashot", "Ahmetov", 20)
-        );
+        List<Student> list = getStudents();
 
         // TODO: Отсортировать по score и по алфавиту, выбрать только тех, у кого score больше или равно 56
 
         Assertions.assertEquals("Kuznecov", list.get(0).getLastName());
         Assertions.assertEquals("Antonov", list.get(1).getLastName());
         Assertions.assertEquals(60, list.get(2).getScore());
+    }
+
+    @Test
+    void checkTask5() {
+        List<Student> list = getStudents();
+
+        int count = 0;
+        // TODO: посчитать количество троечников (у кого score больше или равно 56 и меньше или равно 70)
+
+        Assertions.assertEquals(count, 2);
     }
 }

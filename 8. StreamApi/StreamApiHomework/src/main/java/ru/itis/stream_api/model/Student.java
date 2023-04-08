@@ -35,6 +35,18 @@ public class Student {
         return score;
     }
 
+    public String getScoreDescription() {
+        if (score < 56) {
+            return "Неуд";
+        } else if(score < 71) {
+            return "Удовлетворительно";
+        } else if(score < 87) {
+            return "Хорошо";
+        } else {
+            return "Отлично";
+        }
+    }
+
     public void setScore(int score) {
         if(score > 100 || score < 0) {
             System.out.println("Wrong score");
