@@ -2,6 +2,7 @@ package ru.itis.threads_intro.volatile_example;
 
 public class VolatileSandbox {
     static int i = 0;
+    static final Object o = new Object();
 
     public static void main(String[] args) throws Exception {
         Thread thread1 = new Thread(() -> {

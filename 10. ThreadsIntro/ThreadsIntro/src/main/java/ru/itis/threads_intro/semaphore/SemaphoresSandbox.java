@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 
 public class SemaphoresSandbox {
-    private static List<Integer> list = new ArrayList<>();
+    private static final List<Integer> list = new ArrayList<>();
     static Integer counter = 0;
 
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SynchronizedSandbox {
-    private static List<Integer> list = new ArrayList<>();
+    private static final List<Integer> list = new ArrayList<>();
     static Integer counter = 0;
     static final Object synchronizationKey = new Object();
 

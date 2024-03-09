@@ -38,8 +38,7 @@ public class GeocodeServiceYandexUrlConnectionImpl implements GeocodingService {
             // writer.write(requestBody);
 
             if (connection.getResponseCode() != 200) {
-                System.err.println("connection failed");
-                return "";
+                throw new GeocodingException("Connection failed");
             }
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
