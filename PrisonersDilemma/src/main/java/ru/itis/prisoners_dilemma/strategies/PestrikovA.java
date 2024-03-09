@@ -5,11 +5,18 @@ import ru.itis.prisoners_dilemma.api.Strategy;
 import ru.itis.prisoners_dilemma.api.Student;
 
 import java.util.List;
+import java.util.Random;
 
-@Student(name = "Правдивый")
-public class TrueManStrategy implements Strategy {
+@Student(name = "Пестриков Артем")
+public class PestrikovA implements Strategy {
     @Override
     public Decision play(int levelNumber, List<Decision> lastGames) {
-        return Decision.COOPERATE;
+        Random random = new Random();
+        int num = random.nextInt(100);
+        if (num <= 20) {
+            return Decision.COOPERATE;
+        }
+        return Decision.LIE;
     }
 }
+

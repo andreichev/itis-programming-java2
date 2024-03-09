@@ -6,10 +6,16 @@ import ru.itis.prisoners_dilemma.api.Student;
 
 import java.util.List;
 
-@Student(name = "Правдивый")
-public class TrueManStrategy implements Strategy {
+@Student(name = "Гасимов Наиль")
+public class GasimovN implements Strategy {
     @Override
     public Decision play(int levelNumber, List<Decision> lastGames) {
-        return Decision.COOPERATE;
+           double res = Math.random();
+           if (res >= 0.8) {
+               return Decision.COOPERATE;
+           }
+
+        return Decision.LIE;
     }
 }
+
