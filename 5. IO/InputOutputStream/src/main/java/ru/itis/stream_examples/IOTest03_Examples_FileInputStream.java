@@ -8,7 +8,7 @@ import java.io.InputStream;
 public class IOTest03_Examples_FileInputStream {
     public static void main(String[] args) {
         // File file = Utils.getTestFile();
-        File file = new File("/test/test.txt");
+        File file = new File("test/test.txt");
         try (InputStream in = new FileInputStream(file)) {
             System.out.println(in.read());
             System.out.println(in.read());

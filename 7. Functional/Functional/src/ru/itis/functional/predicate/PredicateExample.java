@@ -16,7 +16,7 @@ public class PredicateExample {
         // Пример фильтрации массива
         List<String> result = list.stream()
                 .filter(line -> line.length() > 3)
-                .collect(Collectors.toList());
+                .toList();
 
         for(String line: result) {
             System.out.println(line);

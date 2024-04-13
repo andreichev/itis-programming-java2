@@ -2,7 +2,6 @@ package ru.itis.functional.function;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class FunctionExample {
     public static void main(String[] args) {
@@ -14,9 +13,7 @@ public class FunctionExample {
         list1.add("4");
 
         List<Integer> list2 = list1.stream()
-                .map(item -> Integer.valueOf(item))
-                .collect(Collectors.toList());
-
-
+                .map(Integer::valueOf)
+                .toList();
     }
 }

@@ -28,7 +28,7 @@ public class IOTest02_Catching {
         in = null;
         try {
             in = Utils.getTestRemoteInputStream();
-            System.out.println(in.read());
+            System.out.println((char) in.read());
             // Now we can wait for blocking resource (disconnect from internet).
             Thread.sleep(5000);//Please turn of internet connection now
             System.out.println((char) in.read()); //IOException HERE
