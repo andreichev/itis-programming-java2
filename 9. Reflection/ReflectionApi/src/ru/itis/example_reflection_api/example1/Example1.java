@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 
 public class Example1 {
     public static void main(String[] args) throws Exception {
-        Class<?> personClass = Person.class;
+        Class<Person> personClass = Person.class;
         Field nameField = personClass.getDeclaredField("name");
         nameField.setAccessible(true);
 
